@@ -50,9 +50,6 @@ const Header = () => {
               <Link to="/profile" className="icon-btn" title="Profile">
                 <FaUserCircle />
               </Link>
-              <Link to="/settings" className="icon-btn" title="Settings">
-                <IoSettingsSharp />
-              </Link>
             </div>
 
             <div className="auth-buttons">

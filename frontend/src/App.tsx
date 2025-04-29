@@ -11,7 +11,6 @@ import Signup from './Pages/Auth/Signup';
 import Notifications from './Pages/Notifications/Notifications';
 import Profile from './Pages/Profile/Profile';
 import EditProfile from './Components/Profile/EditProfile';
-import Settings from './Pages/Settings/Settings';
 import Create from './Pages/Create/Create';
 import MyEvents from './Pages/MyEvents/MyEvents';
 import EventDetails from './Pages/MyEvents/EventDetails';
@@ -47,11 +46,6 @@ const AppContent = () => {
           <Route path="/profile/edit" element={
             <ProtectedRoute>
               <EditProfile />
-            </ProtectedRoute>
-          } />
-          <Route path="/settings" element={
-            <ProtectedRoute>
-              <Settings />
             </ProtectedRoute>
           } />
           <Route path="/create" element={

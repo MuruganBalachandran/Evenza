@@ -10,6 +10,9 @@ const EventTemplate = require('../models/EventTemplate');
 const mongoose = require('mongoose');
 const path = require('path');
 
+// Import controllers
+const settingsController = require('../controllers/settingsController');
+
 // Test route
 router.get('/test', (req, res) => {
   res.json({ message: 'API is working!' });
@@ -347,34 +350,10 @@ router.get('/users/:userId/history', async (req, res) => {
 });
 
 // Settings routes
-router.get('/settings', async (req, res) => {
-  try {
-    if (mongoose.connection.readyState !== 1) {
-      throw new Error('Database not connected');
-    }
-    const settings = await Setting.find()
-      .populate('user_id')
-      .maxTimeMS(5000);
-    console.log('Retrieved settings:', settings.length);
-    res.json(settings);
-  } catch (error) {
-    console.error('Error fetching settings:', error);
-    res.status(500).json({ message: error.message });
-  }
-});
-
-router.get('/users/:userId/settings', async (req, res) => {
-  try {
-    const settings = await Setting.findOne({ user_id: req.params.userId });
-    if (!settings) {
-      return res.status(404).json({ message: 'No settings found for this user' });
-    }
-    res.json(settings);
-  } catch (error) {
-    console.error('Error fetching user settings:', error);
-    res.status(500).json({ message: error.message });
-  }
-});
+router.get('/settings', settingsController.getAllSettings);
+router.get('/users/:userId/settings', settingsController.getUserSettings);
+router.post('/settings', settingsController.createSettings);
+router.patch('/users/:userId/settings', settingsController.updateSettings);
 
 // EventTemplates routes
 router.get('/templates', async (req, res) => {
