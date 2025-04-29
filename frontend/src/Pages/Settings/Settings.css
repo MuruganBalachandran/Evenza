@@ -1,0 +1,163 @@
+.settings-container {
+  display: flex;
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.settings-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.settings-container p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.settings-page {
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  background: #f8fafc;
+}
+
+.settings-header {
+  background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+  padding: 3rem 2rem;
+  margin-bottom: 2rem;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(100, 108, 255, 0.3);
+}
+
+.settings-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.settings-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.settings-sidebar {
+  flex: 0 0 300px;
+  position: sticky;
+  top: 80px;
+  height: fit-content;  /* Changed from fixed height */
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  overflow-y: visible; /* Remove scroll from sidebar */
+}
+
+.settings-nav-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 1px solid transparent;
+  background: none;
+  border-radius: 10px;
+  color: #4a5568;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.settings-nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #646cff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: right;
+}
+
+.settings-nav-item:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.settings-nav-item.active::after {
+  transform: scaleX(1);
+}
+
+.settings-nav-item:hover {
+  background: #eef2ff;
+  color: #646cff;
+  transform: translateX(3px);
+  border-color: rgba(100, 108, 255, 0.1);
+}
+
+.settings-nav-item.active {
+  background: #646cff;
+  color: white;
+  box-shadow: 0 4px 12px rgba(100, 108, 255, 0.2);
+}
+
+.settings-main {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  max-height: calc(100vh - 200px); /* Set max height */
+  overflow-y: auto; /* Only main content scrolls */
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Update scrollbar styling to only apply to main content */
+.settings-main::-webkit-scrollbar {
+  width: 6px;
+}
+
+.settings-main::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.settings-main::-webkit-scrollbar-thumb {
+  background: #646cff;
+  border-radius: 3px;
+}
+
+.settings-main::-webkit-scrollbar-thumb:hover {
+  background: #535bf2;
+}
+
+@media (max-width: 768px) {
+  .settings-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .settings-sidebar {
+    flex: none;
+    position: static;
+    height: auto;
+    width: 100%;
+  }
+
+  .settings-main {
+    min-height: auto;
+  }
+}

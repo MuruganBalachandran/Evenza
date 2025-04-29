@@ -1,0 +1,400 @@
+.event-details-page {
+  padding: 2rem;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.event-details-header {
+  max-width: 1600px;
+  margin: 0 auto 2rem;
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.header-content h1 {
+  font-size: 2rem;
+  color: #1e293b;
+  margin: 0;
+}
+
+.event-status {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+}
+
+.event-status[data-status="active"] {
+  background: #22c55e;
+}
+
+.event-status[data-status="draft"] {
+  background: #64748b;
+}
+
+.event-status[data-status="completed"] {
+  background: #3b82f6;
+}
+
+.event-status[data-status="cancelled"] {
+  background: #ef4444;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-primary, .btn-secondary, .btn-danger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #646cff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #535bf2;
+}
+
+.btn-secondary {
+  background: white;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+}
+
+.btn-secondary:hover {
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+.btn-danger {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+.btn-danger:hover {
+  background: #fecaca;
+}
+
+.event-details-content {
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.event-tabs {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: none;
+  color: #64748b;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.tab:hover {
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+.tab.active {
+  background: #646cff;
+  color: white;
+}
+
+.event-overview {
+  padding: 2rem;
+}
+
+.info-section {
+  margin-bottom: 2rem;
+}
+
+.info-section h3 {
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.info-item .icon {
+  color: #646cff;
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-content label {
+  color: #64748b;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.info-content span {
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.info-content .secondary {
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+
+.description-section {
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+.description-section h3 {
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.description-section p {
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* Attendees Section */
+.attendees-section {
+  padding: 2rem;
+}
+
+.attendees-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.attendees-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.attendees-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attendees-table th {
+  text-align: left;
+  padding: 1rem;
+  background: #f8fafc;
+  color: #64748b;
+  font-weight: 500;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.attendees-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: #1e293b;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.status-badge.confirmed {
+  background: #dcfce7;
+  color: #22c55e;
+}
+
+.status-badge.pending {
+  background: #fef9c3;
+  color: #ca8a04;
+}
+
+.status-badge.cancelled {
+  background: #fee2e2;
+  color: #ef4444;
+}
+
+.btn-icon {
+  padding: 0.5rem;
+  background: transparent;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-icon:hover {
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+/* Analytics Section */
+.analytics-section {
+  padding: 2rem;
+}
+
+.analytics-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.analytics-card {
+  background: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.analytics-card h4 {
+  color: #64748b;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.analytics-value {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #646cff;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* Loading State */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  font-size: 1.25rem;
+  color: #64748b;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .event-details-page {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .event-details-page {
+    padding: 1rem;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .header-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary, .btn-secondary, .btn-danger {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .event-tabs {
+    overflow-x: auto;
+    padding: 1rem;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.header-top {
+  margin-bottom: 1.5rem;
+}
+
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  color: #64748b;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+@media (max-width: 768px) {
+  .header-top {
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,142 @@
+.integrations-settings {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.integration-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.integration-card:hover {
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.integration-card h3 {
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.settings-form-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.integration-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.integration-section {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.integration-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #1e293b;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.integration-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.service-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.service-info h3 {
+  margin: 0;
+  color: #1e293b;
+}
+
+.service-info p {
+  margin: 0.25rem 0 0;
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.service-icon {
+  font-size: 2rem;
+}
+
+.service-icon.zoom { color: #2D8CFF; }
+.service-icon.teams { color: #6264A7; }
+.service-icon.slack { color: #E01E5A; }
+.service-icon.discord { color: #7289DA; }
+.service-icon.stripe { color: #6772E5; }
+.service-icon.paypal { color: #00457C; }
+
+.connect-button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 100px;
+  text-align: center;
+}
+
+.connect-button:not(.connected) {
+  background: #646cff;
+  color: white;
+  border: none;
+}
+
+.connect-button.connected {
+  background: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+}
+
+.connect-button:not(.connected):hover {
+  background: #535bf2;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .integration-section {
+    padding: 1.5rem;
+  }
+
+  .integration-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .service-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .connect-button {
+    width: 100%;
+  }
+}

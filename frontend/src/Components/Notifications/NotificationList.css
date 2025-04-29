@@ -1,0 +1,47 @@
+.notifications-content {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.notifications-actions {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-clear {
+  padding: 0.5rem 1rem;
+  color: #dc2626;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-clear:hover {
+  text-decoration: underline;
+  background: #fee2e2;
+  border-radius: 6px;
+}
+
+.notifications-list {
+  padding: 1rem;
+}
+
+.no-notifications {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #64748b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.no-notifications .icon {
+  font-size: 3rem;
+  opacity: 0.5;
+}

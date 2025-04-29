@@ -1,0 +1,61 @@
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: 100;
+}
+
+.event-menu {
+  position: fixed;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 200px;
+  z-index: 1000;
+  padding: 0.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: #1e293b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 0.875rem;
+  text-align: left;
+  border-radius: 6px;
+}
+
+.menu-item:hover {
+  background: #f8fafc;
+}
+
+.menu-item.danger {
+  color: #ef4444;
+}
+
+.menu-item.danger:hover {
+  background: #fee2e2;
+}
+
+.menu-icon {
+  font-size: 1rem;
+  color: #64748b;
+}
+
+.menu-item.danger .menu-icon {
+  color: #ef4444;
+}
+
+.menu-item:not(:last-child) {
+  margin-bottom: 0.25rem;
+}

@@ -1,0 +1,5 @@
+.protected-content {
+  position: relative;
+  min-height: calc(100vh - 120px); /* Account for header and footer */
+  margin-top: 60px; /* Height of header */
+} 
