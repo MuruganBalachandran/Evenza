@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { IoNotifications } from 'react-icons/io5';
 import { FaUserCircle } from 'react-icons/fa';
-import { IoSettingsSharp } from 'react-icons/io5';
 import { useAuth } from '../../context/AuthContext';
 import './Header.css';
 
