@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: evenza-backend
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm run dev
+    envVars:
+      - key: NODE_ENV
+        value: development
+      - key: MONGODB_URI
+        value: mongodb+srv://murugan:evenza@evenza.tly0mgk.mongodb.net/evenza?retryWrites=true&w=majority&appName=evenza
+      - key: MONGODB_DB_NAME
+        value: evenza
+      - key: PORT
+        value: 5000
